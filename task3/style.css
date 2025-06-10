@@ -95,3 +95,19 @@
             display: flex;
             min-height: 500px;
         }
+
+        .siderbar{
+            width: 280px;
+            background: #f8fafc;
+            border-right: 1px solid #eaeff5;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+        }
