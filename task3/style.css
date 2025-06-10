@@ -462,7 +462,11 @@
             gap: 10px;
         }
 
-        
+        .footer-github h3 {
+            font-size: 1.3rem;
+            margin: 0;
+            font-weight: 600;
+        }
 
         @media (max-width: 768px) {
             .app-container {
