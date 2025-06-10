@@ -566,3 +566,18 @@
                 font-size: 1.3rem;
             }
         }
+
+        @media (max-width:768px){
+            .footer-top {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-credits {
+                text-align: center
+            }
+
+            .footer-github h3 {
+                font-size: 1.1rem;
+            }
+        }
