@@ -455,7 +455,12 @@
             text-align: left;
         }
 
-        
+        .footer-github{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
 
         @media (max-width: 768px) {
             .app-container {
