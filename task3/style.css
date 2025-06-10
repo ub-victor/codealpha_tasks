@@ -425,5 +425,11 @@
                 border-bottom: 1px solid #eaeff5;
             }
 
-            
+            .flashcard-list {
+                max-height: 200px;
+            }
+
+            .card-container{
+                height: 280px;
+            }
         }
