@@ -370,3 +370,12 @@
             font-weight: 600;
             color: var(--dark);
         }
+
+        .form-control {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
