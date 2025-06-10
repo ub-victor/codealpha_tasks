@@ -183,6 +183,7 @@
             cursor: pointer;
             border: 2px solid #e2e8f0;
             transition: all 0.2s ease;
+            position: relative;
         }
 
 
