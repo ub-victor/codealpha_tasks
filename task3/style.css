@@ -442,6 +442,6 @@
                 font-size: 1.8rem;
             }
             .stats {
-                flex-wrap:nowrap;
+                flex-wrap: wrap;
             }
         }
