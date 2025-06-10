@@ -171,7 +171,8 @@
 
         .flashcard-list {
             margin-top: 15px;
-            overflow-y: auto;
+            /* Enable vertical scrolling if content overflows */
+            overflow-y: auto; 
             flex: 1;
         }
 
@@ -188,7 +189,7 @@
 
         .flashcard-item:hover {
             border-color: var(--primary);
-            transform: translateX(5px);
+            /* transform: translateX(5px); */
         }
 
         .flashcard-item.active {
