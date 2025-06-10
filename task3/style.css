@@ -1,20 +1,18 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-
-:root {
-    --primary: #4361ee;
-    --primary-dark: #3a56d4;
-    --secondary: #ff6b6b;
-    --light: #f8f9fa;
-    --dark: #212529;
-    --success: #06d6a0;
-    --warning: #ffd166;
-    --gray: #adb5bd;
-    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-
-}
+        :root {
+            --primary: #4361ee;
+            --primary-dark: #3a56d4;
+            --secondary: #ff6b6b;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #06d6a0;
+            --warning: #ffd166;
+            --gray: #adb5bd;
+            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
