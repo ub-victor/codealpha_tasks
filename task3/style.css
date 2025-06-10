@@ -44,3 +44,9 @@
             justify-content: center;
             gap: 12px;
         }
+
+        header h1 i {
+            font-size: 1.8rem;
+        }
+
+        
