@@ -36,6 +36,14 @@
             overflow: hidden;
         }
 
+        header {
+            background: linear-gradient(120deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 25px 30px;
+            text-align: center;
+            position: relative;
+        }
+
         header h1 {
             font-size: 2.2rem;
             margin-bottom: 8px;
@@ -62,7 +70,7 @@
             justify-content: center;
             gap: 25px;
             margin-top: 20px;
-            background: rgba(231, 7, 7, 0.925);
+            background: rgba(255, 255, 255, 0.15);
             padding: 12px;
             border-radius: 12px;
             backdrop-filter: blur(5px);
