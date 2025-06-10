@@ -444,4 +444,10 @@
             .stats {
                 flex-wrap: wrap;
             }
+
+            .navigation .btn {
+                flex-wrap: wrap;
+            }
+
+            
         }
