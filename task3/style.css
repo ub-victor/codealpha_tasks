@@ -112,4 +112,16 @@
             flex-direction: column;
         }
 
-        
+        .section-title {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            font-size: 1.1rem;
+        }
+
