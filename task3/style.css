@@ -457,5 +457,9 @@
                 height: 250px;
             }
 
-
+            .card-content{
+                font-size: 1.3rem;
+            }
         }
+
+        
