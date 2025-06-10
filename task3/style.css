@@ -171,7 +171,7 @@
 
         .flashcard-list {
             margin-top: 15px;
-            overflow-y: auto;
+            /* overflow-y: auto; */
             flex: 1;
         }
 
@@ -307,3 +307,4 @@
         .card-back .card-label {
             color: rgba(255, 255, 255, 0.8);
         }
+
