@@ -337,4 +337,9 @@
             color: #64748b;
         }
 
-        
+        .progress-bar {
+            height: 10px;
+            background: #e2e8f0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
