@@ -85,3 +85,13 @@
             font-size: 1.6rem;
             font-weight: bold;
         }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .app-container {
+            display: flex;
+            min-height: 500px;
+        }
