@@ -288,4 +288,8 @@
             transform: rotateY(180deg);
         }
 
-        .card-label
+        .card-content {
+            font-size: 1.8rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
