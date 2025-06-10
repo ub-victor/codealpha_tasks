@@ -189,7 +189,8 @@
 
         .flashcard-item:hover {
             border-color: var(--primary);
-            /* transform: translateX(5px); */
+            /*  */
+            transform: translateX(5px);
         }
 
         .flashcard-item.active {
