@@ -219,7 +219,7 @@
             gap: 8px;
         }
 
-        /* .card-controls button {
+        .card-controls button {
             background: none;
             border: none;
             color: var(--gray);
@@ -230,7 +230,9 @@
 
         .card-controls button:hover{
             color: var(--primary);
-        } */
+        }
+
+        
 
 
 
