@@ -310,4 +310,17 @@
             color: rgba(255, 255, 255, 0.8);
         }
 
+        .navigation {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
         
