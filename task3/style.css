@@ -445,9 +445,13 @@
                 flex-wrap: wrap;
             }
 
-            .navigation .btn {
+            .navigation {
                 flex-wrap: wrap;
             }
 
-            
+            .navigation .btn {
+                flex: 1;
+            }
+
+
         }
