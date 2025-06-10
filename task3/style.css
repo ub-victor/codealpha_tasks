@@ -76,3 +76,12 @@
             backdrop-filter: blur(5px);
 
         }
+
+        .stats-item{
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 1.6rem;
+            font-weight: bold;
+        }
