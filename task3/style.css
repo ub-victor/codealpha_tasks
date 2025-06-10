@@ -468,7 +468,13 @@
             font-weight: 600;
         }
 
-        
+        .github-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            animation: bounce 2s infinite;
+        }
 
         @media (max-width: 768px) {
             .app-container {
