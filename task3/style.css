@@ -16,3 +16,7 @@
             --gray: #adb5bd;
             --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+        }
