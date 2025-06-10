@@ -260,3 +260,7 @@
             border-radius: 20px;
             box-shadow: var(--card-shadow);
         }
+
+        .card.flippped {
+            transform: rotateY('180deg');
+        }
