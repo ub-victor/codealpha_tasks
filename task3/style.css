@@ -294,4 +294,12 @@
             line-height: 1.4;
         }
 
-        
+        .card-label {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
