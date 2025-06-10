@@ -329,4 +329,10 @@
             margin: 20px auto;
         }
 
-        
+        .progress-text {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
