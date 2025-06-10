@@ -261,6 +261,7 @@
             box-shadow: var(--card-shadow);
         }
 
-        .card.flippped {
+        .card.flipped {
             transform: rotateY('180deg');
         }
+
