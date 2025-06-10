@@ -106,7 +106,6 @@
         }
 
         .main-content {
-            display: flex;
             flex: 1;
             padding: 30px;
             display: flex;
