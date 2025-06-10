@@ -168,3 +168,10 @@
             background: var(--primary);
             color: white;
         }
+
+        .flashcard-list {
+            margin-top: 15px;
+            overflow-y: auto;
+            float: 1;
+        }
+        
