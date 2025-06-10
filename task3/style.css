@@ -414,6 +414,17 @@
             color: #475569;
         }
 
+        .flip-hint {
+            margin-top: 20px;
+            color: #64748b;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .flip-hint i {
+            margin-right: 5px;
+        }
+
         @media (max-width: 768px) {
             .app-container {
                 flex-direction: column;
@@ -462,15 +473,4 @@
             .card-content {
                 font-size: 1.3rem;
             }
-        }
-
-        .flip-hint {
-            margin-top: 20px;
-            color: #64748b;
-            font-size: 0.9rem;
-            text-align: center;
-        }
-
-        .flip-hint i {
-            margin-right: 5px;
         }
