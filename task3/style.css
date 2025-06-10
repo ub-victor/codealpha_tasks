@@ -219,7 +219,7 @@
             gap: 8px;
         }
 
-        .card-controls button {
+        /* .card-controls button {
             background: none;
             border: none;
             color: var(--gray);
@@ -228,7 +228,11 @@
             transition: all 0.2s;
         }
 
-        
+        .card-controls button:hover{
+            color: var(--primary);
+        } */
+
+
 
 
 
