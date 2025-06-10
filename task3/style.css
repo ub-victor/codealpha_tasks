@@ -96,7 +96,7 @@
         }
 
         .sidebar {
-            width: 290px;
+            width: 280px;
             background: #f8fafc;
             border-right: 1px solid #eaeff5;
             padding: 25px;
@@ -171,8 +171,7 @@
 
         .flashcard-list {
             margin-top: 15px;
-            /* Enable vertical scrolling if content overflows */
-            overflow-y: auto; 
+            overflow-y: auto;
             flex: 1;
         }
 
@@ -189,7 +188,6 @@
 
         .flashcard-item:hover {
             border-color: var(--primary);
-            /*  */
             transform: translateX(5px);
         }
 
@@ -322,7 +320,7 @@
             gap: 15px;
             margin-top: 25px;
         }
-        
+
         .progress-container {
             width: 100%;
             max-width: 500px;
@@ -352,7 +350,7 @@
             transition: width 0.5s ease;
         }
 
-        .form-container { 
+        .form-container {
             background: white;
             padding: 25px;
             border-radius: 15px;
@@ -386,15 +384,21 @@
             box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
         }
 
-        textarea.form-control{
+        textarea.form-control {
             min-height: 120px;
             resize: vertical;
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
         }
 
         .empty-state {
             text-align: center;
             padding: 40px 20px;
-            color: #64748b
+            color: #64748b;
         }
 
         .empty-state i {
@@ -408,4 +412,3 @@
             margin-bottom: 10px;
             color: #475569;
         }
-
