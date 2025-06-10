@@ -303,3 +303,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
+
+        .card-back .card-label {
+            color: rgba(255, 255, 255, 0.8);
+        }
