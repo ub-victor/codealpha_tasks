@@ -432,4 +432,7 @@
             .card-container{
                 height: 280px;
             }
+            .card-content {
+                font-size: 1.5rem;
+            }
         }
