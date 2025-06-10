@@ -240,9 +240,15 @@
             justify-content: center;
         }
 
-        
 
 
+        .card-container {
+            width: 100%;
+            max-width: 500px;
+            height: 320px;
+            perspective: 1500px;
+            margin-bottom: 30px;
+        }
 
 
 
