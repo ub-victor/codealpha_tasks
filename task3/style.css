@@ -281,3 +281,7 @@
             background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
             border: 1px solid #e2e8f0;
         }
+
+        .card-back {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        }
