@@ -196,7 +196,28 @@
             background: rgba(67, 97, 238, 0.05);
         }
 
-        
+        .flashcard-item h4 {
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+
+        .flashcard-item p {
+            font-size: 0.9rem;
+            color: #64748b;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-controls {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            display: flex;
+            gap: 8px;
+        }
 
 
 
