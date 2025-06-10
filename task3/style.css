@@ -352,7 +352,7 @@
             transition: width 0.5s ease;
         }
 
-        .form-container {
+        .form-container { 
             background: white;
             padding: 25px;
             border-radius: 15px;
@@ -409,4 +409,3 @@
             color: #475569;
         }
 
-        
