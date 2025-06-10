@@ -462,4 +462,13 @@
             }
         }
 
-        
+        .flip-hint {
+            margin-top: 20px;
+            color: #64748b;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .flip-hint i {
+            margin-right: 5px;
+        }
