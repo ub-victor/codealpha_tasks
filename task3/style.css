@@ -414,50 +414,52 @@
             color: #475569;
         }
 
-        @media (max-width: 768px){
-            .app-container{
+        @media (max-width: 768px) {
+            .app-container {
                 flex-direction: column;
             }
-
+            
             .sidebar {
                 width: 100%;
-                border-right: node;
+                border-right: none;
                 border-bottom: 1px solid #eaeff5;
             }
-
+            
             .flashcard-list {
                 max-height: 200px;
             }
-
-            .card-container{
+            
+            .card-container {
                 height: 280px;
             }
+            
             .card-content {
                 font-size: 1.5rem;
             }
         }
 
-        @media (max-width: 480px){
+        @media (max-width: 480px) {
             header h1 {
                 font-size: 1.8rem;
             }
+            
             .stats {
                 flex-wrap: wrap;
             }
-
+            
             .navigation {
                 flex-wrap: wrap;
             }
-
+            
             .navigation .btn {
                 flex: 1;
             }
-
+            
             .card-container {
                 height: 250px;
             }
-
-            .card-content{
+            
+            .card-content {
                 font-size: 1.3rem;
             }
         }
