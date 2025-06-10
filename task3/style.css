@@ -418,4 +418,10 @@
             .app-container{
                 flex-direction: column;
             }
+
+            .sidebar {
+                width: 100%;
+                border-right: node;
+                border-bottom: 1px solid #eaeff5;
+            }
         }
