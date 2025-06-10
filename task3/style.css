@@ -219,7 +219,15 @@
             gap: 8px;
         }
 
-        
+        .card-controls button {
+            background: none;
+            border: none;
+            color: var(--gray);
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
 
 
 
