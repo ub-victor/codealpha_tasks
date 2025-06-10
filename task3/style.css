@@ -282,14 +282,14 @@
             border: 1px solid #e2e8f0;
         }
 
-        .card-back {
+        /* .card-back {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: white;
             transform: rotateY(180deg);
-        }
+        } */
 
-        .card-content {
+        /* .card-content {
             font-size: 1.8rem;
             font-weight: 600;
             line-height: 1.4;
-        }
+        } */
