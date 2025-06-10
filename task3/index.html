@@ -3,147 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flashcard Master| Interactive Learning Tool</title>
+    <title>Flashcard Master | Interactive Learning Tool</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-    <header>
-        <h1><i class="fas fa-layer-group"></i>Flashcard Master</h1>
-        <p>An Interactive tool to help you study and memorize information effeciently</p>
-
-        <div class="stats">
-            <div class="star-item">
-                <div class="stat-value">8</div>
-                <div class="stat-label">Flashcards</div>
-            </div>
-            <div class="star-item">
-                <div class="stat-value">2</div>
-                <div class="stat-label">Mastered</div>
-            </div>
-            <div class="star-item">
-                <div class="stat-value">30%</div>
-                <div class="stat-label">Progress</div>
-            </div>
-        </div>
-    </header>
-
-    <div class="app-container">
-        <div class="sidebar">
-            <h2 class="section-title"><i class="fas fa-book"></i> Your Flashcard</h2>
-            <button class="btn btn-primary" id="addCardBtn">
-                <i class="fas fa-plus"></i> Add New Card
-            </button>
-
-            <div class="flashcard list">
-                <div class="flashcard-item active">
-                    <div class="card-controls">
-                        <button title="Edit card"><i class="fas fa-edit"></i></button>
-                        <button title="Delete card"><i class="fas fa-trash"></i></button>
-                    </div>
-                    <h4>HTML Basics</h4>
-                    <p>What does HTML stand for?</p>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-layer-group"></i> Flashcard Master</h1>
+            <p>An interactive tool to help you study and memorize information efficiently</p>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-value">8</div>
+                    <div class="stat-label">Flashcards</div>
                 </div>
-
-                <div class="flashcard-item">
-                    <div class="card-controls">
-                        <button title="Edit card"><i class="fas fa-edit"></i></button>
-                        <button title="Delete card"><i class="fas fa-trash"></i></button>
-                    </div>
-
-                    <h4>CSS Box Model</h4>
-                    <p>What are the components of the CSS box model?</p>
+                <div class="stat-item">
+                    <div class="stat-value">2</div>
+                    <div class="stat-label">Mastered</div>
                 </div>
-
-                <div class="flashcard-item">
-                    <div class="card-controls">
-                        <button title="Edit card"><i class="fas fa-edit"></i></button>
-                        <button title="Delete card"><i class="fas fa-trash"></i></button>
-                    </div>
-                    <h4>Responsive Design</h4>
-                    <p>What are media queries in CSS?</p>
+                <div class="stat-item">
+                    <div class="stat-value">30%</div>
+                    <div class="stat-label">Progress</div>
                 </div>
             </div>
-        </div>
-
-        <div class="main-content">
-            <div class="card-contain">
-                <div class="card">
-                    <div class="card-face card-front">
-                        <span class="card-label">Question</span>
-                        <div class="card-contain">
-                            What does HTML Stand for?
+        </header>
+        
+        <div class="app-container">
+            <div class="sidebar">
+                <h2 class="section-title"><i class="fas fa-book"></i> Your Flashcards</h2>
+                <button class="btn btn-primary" id="addCardBtn">
+                    <i class="fas fa-plus"></i> Add New Card
+                </button>
+                
+                <div class="flashcard-list">
+                    <div class="flashcard-item active">
+                        <div class="card-controls">
+                            <button title="Edit card"><i class="fas fa-edit"></i></button>
+                            <button title="Delete card"><i class="fas fa-trash"></i></button>
+                        </div>
+                        <h4>HTML Basics</h4>
+                        <p>What does HTML stand for?</p>
+                    </div>
+                    
+                    <div class="flashcard-item">
+                        <div class="card-controls">
+                            <button title="Edit card"><i class="fas fa-edit"></i></button>
+                            <button title="Delete card"><i class="fas fa-trash"></i></button>
+                        </div>
+                        <h4>CSS Box Model</h4>
+                        <p>What are the components of the CSS box model?</p>
+                    </div>
+                    
+                    <div class="flashcard-item">
+                        <div class="card-controls">
+                            <button title="Edit card"><i class="fas fa-edit"></i></button>
+                            <button title="Delete card"><i class="fas fa-trash"></i></button>
+                        </div>
+                        <h4>JavaScript Fundamentals</h4>
+                        <p>What is the difference between let, const, and var?</p>
+                    </div>
+                    
+                    <div class="flashcard-item">
+                        <div class="card-controls">
+                            <button title="Edit card"><i class="fas fa-edit"></i></button>
+                            <button title="Delete card"><i class="fas fa-trash"></i></button>
+                        </div>
+                        <h4>Responsive Design</h4>
+                        <p>What are media queries in CSS?</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="main-content">
+                <div class="flashcard-view">
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="card-face card-front">
+                                <span class="card-label">Question</span>
+                                <div class="card-content">
+                                    What does HTML stand for?
+                                </div>
+                            </div>
+                            <div class="card-face card-back">
+                                <span class="card-label">Answer</span>
+                                <div class="card-content">
+                                    HyperText Markup Language
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="card-label card-back">
-                        <span class="card-label">Answer</span>
-                        <div class="card-content">
-                            HyperText Markup Language
+                    
+                    <div class="flip-hint">
+                        <i class="fas fa-mouse-pointer"></i> Click on the card to flip and see the answer
+                    </div>
+                    
+                    <div class="progress-container">
+                        <div class="progress-text">
+                            <span>Card 1 of 8</span>
+                            <span>30% Mastered</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
                         </div>
                     </div>
-                </div>
-
-                <div class="flip-hint">
-                    <i class="fas fa-mouse-pointer"></i>Click on the card to flip and see the answer
-                </div>
-
-                <div class="progress-container">
-                    <div class="progress-text">
-                        <span>Card 1 of 8</span>
-                        <span>30% Mastered</span>
+                    
+                    <div class="navigation">
+                        <button class="btn btn-outline" id="prevBtn">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </button>
+                        <button class="btn btn-primary" id="showAnswerBtn">
+                            Show Answer <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="btn btn-outline" id="nextBtn">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </button>
                     </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill"></div>
+                    
+                    <div class="action-buttons">
+                        <button class="btn btn-secondary" id="markMasteredBtn">
+                            <i class="fas fa-check-circle"></i> Mark as Mastered
+                        </button>
+                        <button class="btn btn-outline" id="editCardBtn">
+                            <i class="fas fa-edit"></i> Edit Card
+                        </button>
                     </div>
                 </div>
-
-                <div class="navigation">
-                    <button class="btn btn-outline" id="prevBtn">
-                        <i class="fas fa-arrow-left"></i> Previous
-                    </button>
-                    <button class="btn btn-primary" id="showAnswerBtn">
-                        show Answer <i class="fas fa-eye"></i>
-                    </button>
-                    <button class="btn btn-outline" id="nextBtn">
-                        Next <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="form-container" id="cardForm" style="display: none;">
-                <h2 class="section-title"><i class="fas fa-edit"></i> Edit Flashcard</h2>
-
-                <div class="form-group">
-                    <label for="answer">Answer</label>
-                    <textarea id="answer" class="form-control">HyperText Markup Language</textarea>
-                </div>
-
-                <div class="form-actions">
-                    <button class="btn btn-outline" id="cancelEditBtn">
-                        Cancel
-                    </button>
-                    <button class="btn btn-primary" id="saveCardBtn">
-                        Save Changes
-                    </button>
+                
+                <div class="form-container" id="cardForm" style="display: none;">
+                    <h2 class="section-title"><i class="fas fa-edit"></i> Edit Flashcard</h2>
+                    
+                    <div class="form-group">
+                        <label for="question">Question</label>
+                        <input type="text" id="question" class="form-control" value="What does HTML stand for?">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="answer">Answer</label>
+                        <textarea id="answer" class="form-control">HyperText Markup Language</textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button class="btn btn-outline" id="cancelEditBtn">
+                            Cancel
+                        </button>
+                        <button class="btn btn-primary" id="saveCardBtn">
+                            Save Changes
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-top">
+                    <div class="footer-credits">
+                        <h5>Challenge Task by CodeAlpha</h5>
+                        <h5>Developed by Ushindi Bihame</h5>
+                    </div>
+                    <div class="footer-github">
+                        <h3>Check out my GitHub!!</h3>
+                        <div class="github-link">
+                            <i class="fas fa-hand-point-down"></i>
+                            <a href="https://github.com/ub-victor" target="_blank" class="github-btn">
+                                <i class="fab fa-github"></i> Visit GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>Copyright &copy; <span id="current-year"></span> Ushindi Bihame - All Rights Reserved</p>
+                </div>
+            </div>
+        </footer>
     </div>
-    <footer class="footer-content">
-        <div class="footer-top">
-            <div class="footer-credit">
-                <h5>Chanllenge Task by CodeAlpha</h5>
-                <h5>Developed by Ushindi Bihame</h5>
-            </div>
-            <div class="footer-github">
-                <h3>Check out my GitHub!!</h3>
-                <div class="github-link">
-                    <i class="fas fa-hand-point-down"></i>
-                    <a href=""><i class="fab fa-github"></i>Visit GitHub</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
