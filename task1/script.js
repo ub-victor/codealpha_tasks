@@ -32,4 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
     showAnswerBtn.addEventListener('click', flipCard);
 
     
+
+    
 });
