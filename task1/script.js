@@ -19,6 +19,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Card flip functionality
 
-    
+    function flipCard() {
+        card.classList.toggle('flipped');
+        if (card.classList.contains('flipped')) {
+            showAnswerBtn.innerHTML = 'Show Question <i class="fas fa-eye"></i>';
+        } else {
+            showAnswerBtn.innerHTML = 'Show Answer <i class="fas fa-eye"></i>';
+        }
+    }
     
 });
