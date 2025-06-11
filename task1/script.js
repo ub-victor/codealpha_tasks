@@ -28,7 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    
+    card.addEventListener('click', flipCard);
+    showAnswerBtn.addEventListener('click', flipCard);
 
     
 });

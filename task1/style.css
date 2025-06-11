@@ -254,7 +254,7 @@
             height: 100%;
             position: relative;
             transform-style: preserve-3d;
-            transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: transform 0.10s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             cursor: pointer;
             border-radius: 20px;
             box-shadow: var(--card-shadow);
