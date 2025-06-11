@@ -6,6 +6,604 @@
     <title>Flashcard Master | Interactive Learning Tool</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS remains the same as before */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #4361ee;
+            --primary-dark: #3a56d4;
+            --secondary: #ff6b6b;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #06d6a0;
+            --warning: #ffd166;
+            --gray: #adb5bd;
+            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--dark);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(120deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 25px 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        header h1 i {
+            font-size: 1.8rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 12px;
+            border-radius: 12px;
+            backdrop-filter: blur(5px);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 1.6rem;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .app-container {
+            display: flex;
+            min-height: 500px;
+        }
+
+        .sidebar {
+            width: 280px;
+            background: #f8fafc;
+            border-right: 1px solid #eaeff5;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 20px;
+            border-radius: 12px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .flashcard-list {
+            margin-top: 15px;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .flashcard-item {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            border: 2px solid #e2e8f0;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .flashcard-item:hover {
+            border-color: var(--primary);
+            transform: translateX(5px);
+        }
+
+        .flashcard-item.active {
+            border-color: var(--primary);
+            background: rgba(67, 97, 238, 0.05);
+        }
+
+        .flashcard-item.mastered {
+            background: rgba(6, 214, 160, 0.1);
+            border-color: var(--success);
+        }
+
+        .flashcard-item h4 {
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+
+        .flashcard-item p {
+            font-size: 0.9rem;
+            color: #64748b;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-controls {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .card-controls button {
+            background: none;
+            border: none;
+            color: var(--gray);
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .card-controls button:hover {
+            color: var(--primary);
+        }
+
+        .flashcard-view {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-container {
+            width: 100%;
+            max-width: 500px;
+            height: 320px;
+            perspective: 1500px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .card.flipped {
+            transform: rotateY(180deg);
+        }
+
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .card-front {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border: 1px solid #e2e8f0;
+        }
+
+        .card-back {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        .card-content {
+            font-size: 1.8rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .card-label {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card-back .card-label {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .navigation {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .progress-container {
+            width: 100%;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+
+        .progress-text {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background: #e2e8f0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--primary);
+            border-radius: 5px;
+            transition: width 0.5s ease;
+        }
+
+        .form-container {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: #64748b;
+        }
+
+        .empty-state i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #cbd5e1;
+        }
+
+        .empty-state h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #475569;
+        }
+
+        @media (max-width: 768px) {
+            .app-container {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #eaeff5;
+            }
+            
+            .flashcard-list {
+                max-height: 200px;
+            }
+            
+            .card-container {
+                height: 280px;
+            }
+            
+            .card-content {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .stats {
+                flex-wrap: wrap;
+            }
+            
+            .navigation {
+                flex-wrap: wrap;
+            }
+            
+            .navigation .btn {
+                flex: 1;
+            }
+            
+            .card-container {
+                height: 250px;
+            }
+            
+            .card-content {
+                font-size: 1.3rem;
+            }
+        }
+
+        .flip-hint {
+            margin-top: 20px;
+            color: #64748b;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .flip-hint i {
+            margin-right: 5px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: linear-gradient(120deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 20px;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-top {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+
+        .footer-credits {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align: left;
+        }
+
+        .footer-credits h5 {
+            font-size: 1rem;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .footer-github {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-github h3 {
+            font-size: 1.3rem;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .github-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            animation: bounce 2s infinite;
+        }
+
+        .github-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: white;
+            color: var(--primary);
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .github-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 20px;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Animations */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* Responsive Footer */
+        @media (max-width: 768px) {
+            .footer-top {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-credits {
+                text-align: center;
+            }
+            
+            .footer-github h3 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -15,15 +613,15 @@
             
             <div class="stats">
                 <div class="stat-item">
-                    <div class="stat-value">8</div>
+                    <div class="stat-value" id="total-cards">0</div>
                     <div class="stat-label">Flashcards</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-value">2</div>
+                    <div class="stat-value" id="mastered-cards">0</div>
                     <div class="stat-label">Mastered</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-value">30%</div>
+                    <div class="stat-value" id="progress-percent">0%</div>
                     <div class="stat-label">Progress</div>
                 </div>
             </div>
@@ -36,79 +634,51 @@
                     <i class="fas fa-plus"></i> Add New Card
                 </button>
                 
-                <div class="flashcard-list">
-                    <div class="flashcard-item active">
-                        <div class="card-controls">
-                            <button title="Edit card"><i class="fas fa-edit"></i></button>
-                            <button title="Delete card"><i class="fas fa-trash"></i></button>
-                        </div>
-                        <h4>HTML Basics</h4>
-                        <p>What does HTML stand for?</p>
-                    </div>
-                    
-                    <div class="flashcard-item">
-                        <div class="card-controls">
-                            <button title="Edit card"><i class="fas fa-edit"></i></button>
-                            <button title="Delete card"><i class="fas fa-trash"></i></button>
-                        </div>
-                        <h4>CSS Box Model</h4>
-                        <p>What are the components of the CSS box model?</p>
-                    </div>
-                    
-                    <div class="flashcard-item">
-                        <div class="card-controls">
-                            <button title="Edit card"><i class="fas fa-edit"></i></button>
-                            <button title="Delete card"><i class="fas fa-trash"></i></button>
-                        </div>
-                        <h4>JavaScript Fundamentals</h4>
-                        <p>What is the difference between let, const, and var?</p>
-                    </div>
-                    
-                    <div class="flashcard-item">
-                        <div class="card-controls">
-                            <button title="Edit card"><i class="fas fa-edit"></i></button>
-                            <button title="Delete card"><i class="fas fa-trash"></i></button>
-                        </div>
-                        <h4>Responsive Design</h4>
-                        <p>What are media queries in CSS?</p>
-                    </div>
+                <div class="flashcard-list" id="flashcardList">
+                    <!-- Flashcards will be added here dynamically -->
                 </div>
             </div>
             
             <div class="main-content">
-                <div class="flashcard-view">
-                    <div class="card-container">
-                        <div class="card">
+                <div class="flashcard-view" id="flashcardView">
+                    <div class="empty-state" id="emptyState">
+                        <i class="fas fa-layer-group"></i>
+                        <h3>No Flashcards Available</h3>
+                        <p>Add your first flashcard to get started!</p>
+                    </div>
+                    
+                    <div class="card-container" id="cardContainer" style="display: none;">
+                        <div class="card" id="card">
                             <div class="card-face card-front">
                                 <span class="card-label">Question</span>
-                                <div class="card-content">
-                                    What does HTML stand for?
+                                <div class="card-content" id="cardQuestion">
+                                    <!-- Question will be inserted here -->
                                 </div>
                             </div>
                             <div class="card-face card-back">
                                 <span class="card-label">Answer</span>
-                                <div class="card-content">
-                                    HyperText Markup Language
+                                <div class="card-content" id="cardAnswer">
+                                    <!-- Answer will be inserted here -->
                                 </div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="flip-hint">
+                    <div class="flip-hint" id="flipHint" style="display: none;">
                         <i class="fas fa-mouse-pointer"></i> Click on the card to flip and see the answer
                     </div>
                     
-                    <div class="progress-container">
+                    <div class="progress-container" id="progressContainer" style="display: none;">
                         <div class="progress-text">
-                            <span>Card 1 of 8</span>
-                            <span>30% Mastered</span>
+                            <span id="cardCounter">Card 0 of 0</span>
+                            <span id="progressText">0% Mastered</span>
                         </div>
                         <div class="progress-bar">
-                            <div class="progress-fill"></div>
+                            <div class="progress-fill" id="progressFill"></div>
                         </div>
                     </div>
                     
-                    <div class="navigation">
+                    <div class="navigation" id="navigation" style="display: none;">
                         <button class="btn btn-outline" id="prevBtn">
                             <i class="fas fa-arrow-left"></i> Previous
                         </button>
@@ -120,7 +690,7 @@
                         </button>
                     </div>
                     
-                    <div class="action-buttons">
+                    <div class="action-buttons" id="actionButtons" style="display: none;">
                         <button class="btn btn-secondary" id="markMasteredBtn">
                             <i class="fas fa-check-circle"></i> Mark as Mastered
                         </button>
@@ -131,16 +701,16 @@
                 </div>
                 
                 <div class="form-container" id="cardForm" style="display: none;">
-                    <h2 class="section-title"><i class="fas fa-edit"></i> Edit Flashcard</h2>
+                    <h2 class="section-title" id="formTitle"><i class="fas fa-edit"></i> Edit Flashcard</h2>
                     
                     <div class="form-group">
                         <label for="question">Question</label>
-                        <input type="text" id="question" class="form-control" value="What does HTML stand for?">
+                        <input type="text" id="question" class="form-control" placeholder="Enter your question">
                     </div>
                     
                     <div class="form-group">
                         <label for="answer">Answer</label>
-                        <textarea id="answer" class="form-control">HyperText Markup Language</textarea>
+                        <textarea id="answer" class="form-control" placeholder="Enter the answer"></textarea>
                     </div>
                     
                     <div class="form-actions">
@@ -167,7 +737,7 @@
                         <div class="github-link">
                             <i class="fas fa-hand-point-down"></i>
                             <a href="https://github.com/ub-victor" target="_blank" class="github-btn">
-                                <i class="fab fa-github"></i> Visit My GitHub
+                                <i class="fab fa-github"></i> Visit GitHub
                             </a>
                         </div>
                     </div>
@@ -179,6 +749,378 @@
         </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // DOM Elements
+            const card = document.getElementById('card');
+            const showAnswerBtn = document.getElementById('showAnswerBtn');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const cardForm = document.getElementById('cardForm');
+            const editCardBtn = document.getElementById('editCardBtn');
+            const cancelEditBtn = document.getElementById('cancelEditBtn');
+            const addCardBtn = document.getElementById('addCardBtn');
+            const saveCardBtn = document.getElementById('saveCardBtn');
+            const markMasteredBtn = document.getElementById('markMasteredBtn');
+            const questionInput = document.getElementById('question');
+            const answerInput = document.getElementById('answer');
+            const cardQuestion = document.getElementById('cardQuestion');
+            const cardAnswer = document.getElementById('cardAnswer');
+            const flashcardList = document.getElementById('flashcardList');
+            const emptyState = document.getElementById('emptyState');
+            const cardContainer = document.getElementById('cardContainer');
+            const flipHint = document.getElementById('flipHint');
+            const progressContainer = document.getElementById('progressContainer');
+            const navigation = document.getElementById('navigation');
+            const actionButtons = document.getElementById('actionButtons');
+            const cardCounter = document.getElementById('cardCounter');
+            const progressText = document.getElementById('progressText');
+            const progressFill = document.getElementById('progressFill');
+            const totalCardsEl = document.getElementById('total-cards');
+            const masteredCardsEl = document.getElementById('mastered-cards');
+            const progressPercentEl = document.getElementById('progress-percent');
+            const formTitle = document.getElementById('formTitle');
+            
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            
+            // Initial flashcards data
+            let flashcards = [
+                {
+                    id: 1,
+                    question: 'What does HTML stand for?',
+                    answer: 'HyperText Markup Language',
+                    mastered: false
+                },
+                {
+                    id: 2,
+                    question: 'What are the components of the CSS box model?',
+                    answer: 'Content, Padding, Border, Margin',
+                    mastered: false
+                },
+                {
+                    id: 3,
+                    question: 'What is the difference between let, const, and var?',
+                    answer: 'let and const are block-scoped, var is function-scoped. const cannot be reassigned.',
+                    mastered: false
+                },
+                {
+                    id: 4,
+                    question: 'What are media queries in CSS?',
+                    answer: 'Rules that apply different styles based on device characteristics like screen size.',
+                    mastered: false
+                }
+            ];
+            
+            let currentCardIndex = 0;
+            let isEditing = false;
+            let editCardId = null;
+            
+            // Initialize the app
+            function init() {
+                renderFlashcardList();
+                updateStats();
+                
+                if (flashcards.length > 0) {
+                    showCardView();
+                    showCard(currentCardIndex);
+                } else {
+                    showEmptyState();
+                }
+            }
+            
+            // Render the flashcard list in sidebar
+            function renderFlashcardList() {
+                flashcardList.innerHTML = '';
+                
+                if (flashcards.length === 0) {
+                    flashcardList.innerHTML = `
+                        <div class="empty-state">
+                            <i class="fas fa-layer-group"></i>
+                            <h3>No Flashcards</h3>
+                            <p>Add your first flashcard to get started!</p>
+                        </div>
+                    `;
+                    return;
+                }
+                
+                flashcards.forEach((flashcard, index) => {
+                    const flashcardItem = document.createElement('div');
+                    flashcardItem.className = `flashcard-item ${index === currentCardIndex ? 'active' : ''} ${flashcard.mastered ? 'mastered' : ''}`;
+                    flashcardItem.dataset.id = flashcard.id;
+                    
+                    flashcardItem.innerHTML = `
+                        <div class="card-controls">
+                            <button title="Edit card"><i class="fas fa-edit"></i></button>
+                            <button title="Delete card"><i class="fas fa-trash"></i></button>
+                        </div>
+                        <h4>${flashcard.question}</h4>
+                        <p>${flashcard.answer}</p>
+                    `;
+                    
+                    flashcardList.appendChild(flashcardItem);
+                    
+                    // Add event listeners for the controls
+                    const editBtn = flashcardItem.querySelector('.card-controls button:first-child');
+                    const deleteBtn = flashcardItem.querySelector('.card-controls button:last-child');
+                    
+                    editBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        editFlashcard(flashcard.id);
+                    });
+                    
+                    deleteBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        deleteFlashcard(flashcard.id);
+                    });
+                    
+                    flashcardItem.addEventListener('click', () => {
+                        selectFlashcard(index);
+                    });
+                });
+            }
+            
+            // Show a specific card
+            function showCard(index) {
+                if (flashcards.length === 0) {
+                    showEmptyState();
+                    return;
+                }
+                
+                currentCardIndex = index;
+                const flashcard = flashcards[index];
+                
+                cardQuestion.textContent = flashcard.question;
+                cardAnswer.textContent = flashcard.answer;
+                
+                // Reset card to front
+                card.classList.remove('flipped');
+                showAnswerBtn.innerHTML = 'Show Answer <i class="fas fa-eye"></i>';
+                
+                // Update active state in list
+                document.querySelectorAll('.flashcard-item').forEach((item, i) => {
+                    item.classList.toggle('active', i === index);
+                });
+                
+                // Update mastered button state
+                markMasteredBtn.innerHTML = flashcard.mastered 
+                    ? '<i class="fas fa-check"></i> Mastered!' 
+                    : '<i class="fas fa-check-circle"></i> Mark as Mastered';
+                markMasteredBtn.disabled = flashcard.mastered;
+                
+                // Update card counter
+                cardCounter.textContent = `Card ${index + 1} of ${flashcards.length}`;
+                
+                showCardView();
+            }
+            
+            // Show the card view (hides empty state)
+            function showCardView() {
+                emptyState.style.display = 'none';
+                cardContainer.style.display = 'block';
+                flipHint.style.display = 'block';
+                progressContainer.style.display = 'block';
+                navigation.style.display = 'flex';
+                actionButtons.style.display = 'flex';
+            }
+            
+            // Show empty state (hides card view)
+            function showEmptyState() {
+                emptyState.style.display = 'block';
+                cardContainer.style.display = 'none';
+                flipHint.style.display = 'none';
+                progressContainer.style.display = 'none';
+                navigation.style.display = 'none';
+                actionButtons.style.display = 'none';
+            }
+            
+            // Select a flashcard from the list
+            function selectFlashcard(index) {
+                currentCardIndex = index;
+                showCard(index);
+            }
+            
+            // Go to next card
+            function goToNextCard() {
+                if (flashcards.length === 0) return;
+                
+                card.classList.remove('flipped');
+                showAnswerBtn.innerHTML = 'Show Answer <i class="fas fa-eye"></i>';
+                
+                if (currentCardIndex < flashcards.length - 1) {
+                    currentCardIndex++;
+                } else {
+                    currentCardIndex = 0;
+                }
+                
+                showCard(currentCardIndex);
+            }
+            
+            // Go to previous card
+            function goToPrevCard() {
+                if (flashcards.length === 0) return;
+                
+                card.classList.remove('flipped');
+                showAnswerBtn.innerHTML = 'Show Answer <i class="fas fa-eye"></i>';
+                
+                if (currentCardIndex > 0) {
+                    currentCardIndex--;
+                } else {
+                    currentCardIndex = flashcards.length - 1;
+                }
+                
+                showCard(currentCardIndex);
+            }
+            
+            // Flip the card
+            function flipCard() {
+                card.classList.toggle('flipped');
+                if (card.classList.contains('flipped')) {
+                    showAnswerBtn.innerHTML = 'Show Question <i class="fas fa-eye"></i>';
+                } else {
+                    showAnswerBtn.innerHTML = 'Show Answer <i class="fas fa-eye"></i>';
+                }
+            }
+            
+            // Add a new flashcard
+            function addNewCard() {
+                isEditing = false;
+                editCardId = null;
+                formTitle.innerHTML = '<i class="fas fa-plus"></i> Add New Flashcard';
+                questionInput.value = '';
+                answerInput.value = '';
+                cardForm.style.display = 'block';
+            }
+            
+            // Edit an existing flashcard
+            function editFlashcard(id) {
+                isEditing = true;
+                editCardId = id;
+                const flashcard = flashcards.find(card => card.id === id);
+                
+                if (flashcard) {
+                    formTitle.innerHTML = '<i class="fas fa-edit"></i> Edit Flashcard';
+                    questionInput.value = flashcard.question;
+                    answerInput.value = flashcard.answer;
+                    cardForm.style.display = 'block';
+                }
+            }
+            
+            // Save flashcard (add or edit)
+            function saveFlashcard() {
+                const question = questionInput.value.trim();
+                const answer = answerInput.value.trim();
+                
+                if (!question || !answer) {
+                    alert('Please enter both question and answer');
+                    return;
+                }
+                
+                if (isEditing) {
+                    // Update existing card
+                    const index = flashcards.findIndex(card => card.id === editCardId);
+                    if (index !== -1) {
+                        flashcards[index].question = question;
+                        flashcards[index].answer = answer;
+                    }
+                } else {
+                    // Add new card
+                    const newId = flashcards.length > 0 ? Math.max(...flashcards.map(card => card.id)) + 1 : 1;
+                    flashcards.push({
+                        id: newId,
+                        question,
+                        answer,
+                        mastered: false
+                    });
+                    
+                    // If this was the first card, show the card view
+                    if (flashcards.length === 1) {
+                        currentCardIndex = 0;
+                        showCard(currentCardIndex);
+                    }
+                }
+                
+                // Update UI
+                renderFlashcardList();
+                updateStats();
+                cardForm.style.display = 'none';
+                
+                // Show the current card (which might be the new one)
+                showCard(currentCardIndex);
+            }
+            
+            // Delete a flashcard
+            function deleteFlashcard(id) {
+                if (!confirm('Are you sure you want to delete this flashcard?')) {
+                    return;
+                }
+                
+                const index = flashcards.findIndex(card => card.id === id);
+                if (index !== -1) {
+                    flashcards.splice(index, 1);
+                    
+                    // Adjust current card index if needed
+                    if (currentCardIndex >= flashcards.length) {
+                        currentCardIndex = Math.max(0, flashcards.length - 1);
+                    }
+                    
+                    // Update UI
+                    renderFlashcardList();
+                    updateStats();
+                    
+                    if (flashcards.length > 0) {
+                        showCard(currentCardIndex);
+                    } else {
+                        showEmptyState();
+                    }
+                }
+            }
+            
+            // Mark current card as mastered
+            function markAsMastered() {
+                if (flashcards.length === 0) return;
+                
+                const flashcard = flashcards[currentCardIndex];
+                flashcard.mastered = !flashcard.mastered;
+                
+                // Update UI
+                renderFlashcardList();
+                updateStats();
+                
+                // Update button state
+                markMasteredBtn.innerHTML = flashcard.mastered 
+                    ? '<i class="fas fa-check"></i> Mastered!' 
+                    : '<i class="fas fa-check-circle"></i> Mark as Mastered';
+                markMasteredBtn.disabled = flashcard.mastered;
+            }
+            
+            // Update statistics
+            function updateStats() {
+                const total = flashcards.length;
+                const mastered = flashcards.filter(card => card.mastered).length;
+                const progress = total > 0 ? Math.round((mastered / total) * 100) : 0;
+                
+                totalCardsEl.textContent = total;
+                masteredCardsEl.textContent = mastered;
+                progressPercentEl.textContent = `${progress}%`;
+                progressText.textContent = `${progress}% Mastered`;
+                progressFill.style.width = `${progress}%`;
+            }
+            
+            // Event listeners
+            card.addEventListener('click', flipCard);
+            showAnswerBtn.addEventListener('click', flipCard);
+            prevBtn.addEventListener('click', goToPrevCard);
+            nextBtn.addEventListener('click', goToNextCard);
+            addCardBtn.addEventListener('click', addNewCard);
+            editCardBtn.addEventListener('click', () => editFlashcard(flashcards[currentCardIndex].id));
+            cancelEditBtn.addEventListener('click', () => cardForm.style.display = 'none');
+            saveCardBtn.addEventListener('click', saveFlashcard);
+            markMasteredBtn.addEventListener('click', markAsMastered);
+            
+            // Initialize the app
+            init();
+        });
+    </script>
 </body>
 </html>
