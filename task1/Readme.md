@@ -35,12 +35,19 @@ An interactive flashcard application designed to help users study and memorize i
 - **Animations**: CSS transitions and transforms
 - **Responsive Design**: Media queries and flexible layouts
 
-## Installation
+## Developer
+**👨‍💻 Name:** Ushindi Bihame
 
-No installation required! Simply open the `index.html` file in your web browser.
+**📧 Email:** [My Email](victoireushindhi371@123!)
+
+**🔗 GitHub Profile:** [My Github](https://github.com/ub-victor)
+
+**🔗Portfolio Website:** [My Portfolio](https://my-portfolio-website-show-skills.netlify.app/)
+
+
 
 ```bash
-# Or clone the repository
 git clone https://github.com/ub-victor/flashcard-app.git
 cd flashcard-app
 open index.html
+
