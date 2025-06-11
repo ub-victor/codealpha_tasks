@@ -1,6 +1,8 @@
 # Flashcard Master - Interactive Learning App
 
 ![Flashcard App Screenshot](images/img.png)
+![Flashcard App Screenshot](images/img1.png)
+
 
 An interactive flashcard application designed to help users study and memorize information efficiently. Features a clean, modern interface with flip animations, card management, and progress tracking.
 
