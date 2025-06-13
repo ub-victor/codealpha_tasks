@@ -95,3 +95,9 @@ body {
     text-align: center;
     margin-bottom: 30px;
 }
+
+.song-info h3 {
+    font-size: 1rem;
+    color: var(--gray);
+    font-weight: 400;
+}
