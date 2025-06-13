@@ -182,3 +182,9 @@ body {
     align-items: center;
     gap: 10px;
 }
+
+#playlist {
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto;
+}
