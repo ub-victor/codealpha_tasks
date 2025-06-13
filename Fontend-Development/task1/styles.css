@@ -207,3 +207,12 @@ body {
     justify-content: space-between;
 }
 
+#playlist li:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#playlist li.playing {
+    background: var(--primary);
+    color: white;
+}
+
