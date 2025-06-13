@@ -160,3 +160,7 @@ body {
     border-radius: 50%;
 }
 
+.controls button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+}
