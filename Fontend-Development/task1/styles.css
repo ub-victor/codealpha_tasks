@@ -50,3 +50,12 @@ body {
     font-size: 1.1rem;
     opacity: 0.8;
 }
+
+.music-player {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
