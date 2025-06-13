@@ -192,3 +192,8 @@ body {
 #playlist::-webkit-scrollbar {
     width: 5px;
 }
+
+#playlist::-webkit-scrollbar-thumb {
+    background: var(--secondary);
+    border-radius: 5px;
+}
