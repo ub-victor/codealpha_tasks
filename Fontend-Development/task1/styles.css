@@ -76,3 +76,7 @@ body {
     animation-play-state: paused;
 }
 
+.music-player.playing .album-art img {
+    animation-play-state: running;
+}
+
