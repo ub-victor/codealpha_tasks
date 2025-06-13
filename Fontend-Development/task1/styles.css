@@ -24,3 +24,15 @@ body{
     flex-direction: column;
 }
 
+.music-container {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    flex: 1;
+}
+
+.music-header {
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease;
+}
