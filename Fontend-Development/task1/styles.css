@@ -90,3 +90,8 @@ body {
     opacity: 0.3;
     z-index: -1;
 }
+
+.song-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
