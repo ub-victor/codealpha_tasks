@@ -189,3 +189,6 @@ body {
     overflow-y: auto;
 }
 
+#playlist::-webkit-scrollbar {
+    width: 5px;
+}
