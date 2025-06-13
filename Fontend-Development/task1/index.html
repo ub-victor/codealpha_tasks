@@ -19,6 +19,30 @@
                 <img id="cover" src="assets/images/cover1.jpg" alt="Album cover">
                 <div class="vinyl"></div>
             </div>
+
+            <div class="song-info">
+                <h2 id="title">Song Title</h2>
+                <h3 id="artist">Artist Name</h3>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="progress"></div>
+                <div class="time-info">
+                    <span id="current-time">0:00</span>
+                    <span id="duration">0:00</span>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="prev"><i class="fas fa-step-backward"></i></button>
+                <button id="play"><i class="fas fa-play"></i></button>
+                <button id="next"><i class="fas fa-step-forward"></i></button>
+            </div>
+
+            <div class="volume-control">
+                <i class="fas fa-volume-up"></i>
+                <input type="range" id="volume" min="0" max="1" step="0.01" value="0.7">
+            </div>
     </div>
 
     <script src="script.js"></script>
