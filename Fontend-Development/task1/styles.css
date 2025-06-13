@@ -197,3 +197,13 @@ body {
     background: var(--secondary);
     border-radius: 5px;
 }
+
+#playlist li {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    justify-content: space-between;
+}
+
