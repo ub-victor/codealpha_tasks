@@ -171,3 +171,7 @@ body {
     height: 60px;
     font-size: 1.8rem;
 }
+
+#play:hover {
+    transform: scale(1.05);
+}
