@@ -164,3 +164,10 @@ body {
     background: rgba(255, 255, 255, 0.1);
     transform: scale(1.1);
 }
+
+#play {
+    background: var(--secondary);
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+}
