@@ -1,5 +1,5 @@
 :root {
-     --primary: #6c5ce7;
+    --primary: #6c5ce7;
     --primary-dark: #5649c0;
     --secondary: #fd79a8;
     --dark: #2d3436;
@@ -15,7 +15,7 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: var(--light);
@@ -36,4 +36,3 @@ body{
     margin-bottom: 30px;
     animation: fadeIn 1s ease;
 }
-
