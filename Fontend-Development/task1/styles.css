@@ -176,3 +176,9 @@ body {
     transform: scale(1.05);
 }
 
+.playlist-container h3 {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
