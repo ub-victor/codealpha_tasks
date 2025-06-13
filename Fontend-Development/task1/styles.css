@@ -114,3 +114,34 @@ body {
     margin-bottom: 25px;
     cursor: pointer;
 }
+
+.progress-bar {
+    background: var(--secondary);
+    height: 100%;
+    width: 0%;
+    border-radius: 5px;
+    transition: width 0.1s linear;
+}
+
+.time-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: var(--gray);.time-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: var(--gray);
+}
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
