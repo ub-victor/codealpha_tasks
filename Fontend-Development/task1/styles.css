@@ -59,3 +59,19 @@ body {
     box-shadow: var(--shadow);
     transition: var(--transition);
 }
+
+.album-art {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 30px;
+}
+.album-art img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: rotate 20s linear infinite;
+    animation-play-state: paused;
+}
