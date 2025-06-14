@@ -23,6 +23,18 @@ A beautiful, responsive music player with playlist functionality built with HTML
 - **Animations**: CSS transitions and keyframes
 - **Responsive**: Mobile-first design with media queries
 
+## Developer
+
+**👨‍💻 Name:** **Ushindi Bihame**
+
+**📧 Email:** [My Email](victoireushindhi371@123!)
+
+**🔗 GitHub Profile:** [My Github](https://github.com/ub-victor)
+
+**🔗Portfolio Website:** [My Portfolio](https://my-portfolio-website-show-skills.netlify.app/)
+
+
+
 ## 🚀 Installation & Usage
 
 1. Clone the repository:
