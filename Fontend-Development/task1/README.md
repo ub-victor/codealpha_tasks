@@ -39,5 +39,5 @@ A beautiful, responsive music player with playlist functionality built with HTML
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/music-player.git
+git https://github.com/ub-victor/codealpha_tasks/tree/main/Fontend-Development/task1
 cd music-player
