@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 16,
-            src: 'assets/animals/animal5.jpg',
+            src: 'assets/animals/animal4.jpg',
             alt: 'Wild animal in nature',
             category: 'animals',
             title: 'A tigger in chase '
@@ -129,14 +129,14 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 19,
-            src: 'assets/people/per6.jpg',
+            src: 'assets/people/per5.jpg',
             alt: 'Child playing',
             category: 'people',
             title: 'A Consacreted Family'
         },
         {
             id: 20,
-            src: 'assets/animals/animal6.jpg',
+            src: 'assets/animals/animal5.jpg',
             alt: 'Colorful animal',
             category: 'animals',
             title: 'An animal read A Bible'
@@ -150,105 +150,105 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 22,
-            src: 'assets/architecture/architecture7.png',
+            src: 'assets/architecture/architecture6.jpeg',
             alt: 'Modern bridge',
             category: 'architecture',
             title: 'Modern Building'
         },
         {
             id: 23,
-            src: 'assets/people/per7.jpg',
+            src: 'assets/people/per6.jpg',
             alt: 'Happy family',
             category: 'people',
             title: 'My beloved Parent'
         },
         {
             id: 24,
-            src: 'assets/animals/animal7.avif',
+            src: 'assets/animals/animal6.jpg',
             alt: 'Cameleon dans la nature',
             category: 'animals',
             title: 'A little pup  puppy'
         },
         {
             id: 25,
-            src: 'assets/natural/natural8.jpg',
+            src: 'assets/natural/natural7.jpg',
             alt: 'Beautiful Flower',
             category: 'nature',
             title: 'Beautiful Flower'
         },
         {
             id: 26,
-            src: 'assets/architecture/architecture8.jpg',
+            src: 'assets/architecture/architecture7.png',
             alt: 'Modern architecture',
             category: 'architecture',
             title: 'Modern Building'
         },
         {
             id: 27,
-            src: 'assets/people/per8.jpg',
+            src: 'assets/people/per7.jpg',
             alt: 'Portrait',
             category: 'people',
             title: 'Alicia in Smilled mood'
         },
         {
             id: 28,
-            src: 'assets/animals/animal9.jpg',
+            src: 'assets/animals/animal7.jpg',
             alt: 'Wild animal in nature',
             category: 'animals',
             title: 'A tigger in chase '
         },
         {
             id: 29,
-            src: 'assets/natural/natural9.jpg',
+            src: 'assets/natural/natural8.jpg',
             alt: 'Dense forest',
             category: 'nature',
             title: 'A river'
         },
         {
             id: 30,
-            src: 'assets/architecture/architecture9.jpg',
+            src: 'assets/architecture/architecture8.jpg',
             alt: 'City skyscraper',
             category: 'architecture',
             title: 'Urban Architecture'
         },
         {
-            id: 19,
-            src: 'assets/people/per6.jpg',
+            id: 31,
+            src: 'assets/people/per8.jpg',
             alt: 'Child playing',
             category: 'people',
             title: 'A Consacreted Family'
         },
         {
-            id: 20,
-            src: 'assets/animals/animal6.jpg',
+            id: 32,
+            src: 'assets/animals/animal8.jpg',
             alt: 'Colorful animal',
             category: 'animals',
             title: 'An animal read A Bible'
         },
         {
-            id: 21,
-            src: 'assets/natural/natural6.jpg',
+            id: 33,
+            src: 'assets/natural/natural9.jpg',
             alt: 'Waterfall in jungle',
             category: 'nature',
             title: 'Waterfall In Mountain'
         },
         {
-            id: 22,
-            src: 'assets/architecture/architecture7.png',
+            id: 34,
+            src: 'assets/architecture/architecture9.png',
             alt: 'Modern bridge',
             category: 'architecture',
             title: 'Modern Building'
         },
         {
-            id: 23,
-            src: 'assets/people/per7.jpg',
+            id: 35,
+            src: 'assets/people/per9.jpg',
             alt: 'Happy family',
             category: 'people',
             title: 'My beloved Parent'
         },
         {
-            id: 24,
-            src: 'assets/animals/animal7.avif',
+            id: 36,
+            src: 'assets/animals/animal9.avif',
             alt: 'Cameleon dans la nature',
             category: 'animals',
             title: 'A little pup  puppy'
