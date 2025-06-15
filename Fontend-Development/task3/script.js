@@ -31,38 +31,38 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 5,
-            src: 'https://source.unsplash.com/random/600x600/?forest',
+            src: 'assets/natural/natural2.jpg',
             alt: 'Dense forest',
             category: 'nature',
             title: 'Forest Path'
         },
         {
             id: 6,
-            src: 'https://source.unsplash.com/random/600x600/?skyscraper',
+            src: 'assets/architecture/architecture2.jpg',
             alt: 'City skyscraper',
             category: 'architecture',
             title: 'Urban Architecture'
         },
         {
             id: 7,
-            src: 'https://source.unsplash.com/random/600x600/?child',
+            src: 'assets/people/per2.jpg',
             alt: 'Child playing',
             category: 'people',
-            title: 'Childhood Moments'
+            title: 'A big Bro who Everyone wish'
         },
         {
             id: 8,
-            src: 'https://source.unsplash.com/random/600x600/?bird',
-            alt: 'Colorful bird',
+            src: 'assets/animals/animal2.jpg',
+            alt: 'Colorful animal',
             category: 'animals',
-            title: 'Exotic Bird'
+            title: 'beauty of the forest'
         },
         {
             id: 9,
-            src: 'https://source.unsplash.com/random/600x600/?waterfall',
+            src: 'assets/natural/natural3.jpg',
             alt: 'Waterfall in jungle',
             category: 'nature',
-            title: 'Jungle Waterfall'
+            title: 'Jungle Beauty'
         },
         {
             id: 10,
