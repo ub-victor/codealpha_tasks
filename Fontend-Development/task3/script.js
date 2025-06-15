@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 22,
-            src: 'assets/architecture/architecture7.jpeg',
+            src: 'assets/architecture/architecture7.jng',
             alt: 'Modern bridge',
             category: 'architecture',
             title: 'Suspension Bridge'
