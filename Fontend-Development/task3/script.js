@@ -279,7 +279,7 @@ document.addEventListener('DOMContentLoaded', function() {
             src: 'assets/animals/animal10.jpg',
             alt: 'Cameleon dans la nature',
             category: 'animals',
-            title: 'Elephet and its baby '
+            title: 'Animals photo'
         },
         {
             id: 41,
