@@ -46,5 +46,13 @@ h1 {
 
 .subtitle {
     color: var(--gray);
-    font-size: 1.1rem;
+    font-size: 1.5rem;
+}
+
+.filter-controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
 }
