@@ -276,7 +276,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 40,
-            src: 'assets/animals/animal10.avif',
+            src: 'assets/animals/animal10.jpj',
             alt: 'Cameleon dans la nature',
             category: 'animals',
             title: 'Elephet and its baby '
