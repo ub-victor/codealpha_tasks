@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 22,
-            src: 'assets/architecture/architecture7.jng',
+            src: 'assets/architecture/architecture7.png',
             alt: 'Modern bridge',
             category: 'architecture',
             title: 'Suspension Bridge'
@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 24,
-            src: 'assets/animals/animal7.webp',
+            src: 'assets/animals/animal7.avif',
             alt: 'Cameleon dans la nature',
             category: 'animals',
             title: 'Cameleon dans la nature'
