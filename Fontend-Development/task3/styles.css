@@ -79,7 +79,7 @@ h1 {
     font-weight: 600;
 }
 
-.filter-btn:hover {
+.filter-btn:hover, .filter-btn.active {
     background: var(--primary);
     color: white;
 }
