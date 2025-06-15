@@ -248,3 +248,9 @@ footer {
     gap: 20px;
 }
 
+.footer-credits {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
