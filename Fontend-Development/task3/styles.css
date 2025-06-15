@@ -282,3 +282,15 @@ footer {
     animation: bounce 2s infinite;
 }
 
+.github-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    color: var(--primary);
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
