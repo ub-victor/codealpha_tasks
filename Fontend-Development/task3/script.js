@@ -3,21 +3,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const galleryData = [
         {
             id: 1,
-            src: 'https://source.unsplash.com/random/600x600/?nature',
-            alt: 'Beautiful nature landscape',
+            src: 'assets/natural/natural1.jpg',
+            alt: 'Beautiful Flower',
             category: 'nature',
-            title: 'Mountain Landscape'
+            title: 'Beautiful Flower'
         },
         {
             id: 2,
-            src: 'https://source.unsplash.com/random/600x600/?building',
+            src: 'assets/architecture/architecture1.jpeg',
             alt: 'Modern architecture',
             category: 'architecture',
             title: 'Modern Building'
         },
         {
             id: 3,
-            src: 'https://source.unsplash.com/random/600x600/?portrait',
+            src: 'assets/people/per1.jpg',
             alt: 'Portrait of a woman',
             category: 'people',
             title: 'Portrait Photography'
