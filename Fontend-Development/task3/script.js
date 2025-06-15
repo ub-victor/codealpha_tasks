@@ -73,14 +73,14 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 11,
-            src: 'assets/animals/animal2.jpg',
+            src: 'assets/people/per3.webp',
             alt: 'Happy family',
             category: 'people',
             title: 'Constant un mec souriant '
         },
         {
             id: 12,
-            src: 'https://source.unsplash.com/random/600x600/?lion',
+            src: 'assets/animals/animal3.jpg',
             alt: 'Lion in savanna',
             category: 'animals',
             title: 'King of the Jungle'
