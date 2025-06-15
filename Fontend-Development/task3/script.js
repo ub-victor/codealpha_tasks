@@ -18,16 +18,16 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             id: 3,
             src: 'assets/people/per1.jpg',
-            alt: 'Portrait of a woman',
+            alt: 'Portrait',
             category: 'people',
-            title: 'Portrait Photography'
+            title: 'Winner Photography'
         },
         {
             id: 4,
-            src: 'https://source.unsplash.com/random/600x600/?wildlife',
+            src: 'assets/animal/animal1.jpg',
             alt: 'Wild animal in nature',
             category: 'animals',
-            title: 'Wildlife Photography'
+            title: 'Le Roi des Animaux'
         },
         {
             id: 5,
