@@ -1,0 +1,238 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Gallery data
+    const galleryData = [
+        {
+            id: 1,
+            src: 'https://source.unsplash.com/random/600x600/?nature',
+            alt: 'Beautiful nature landscape',
+            category: 'nature',
+            title: 'Mountain Landscape'
+        },
+        {
+            id: 2,
+            src: 'https://source.unsplash.com/random/600x600/?building',
+            alt: 'Modern architecture',
+            category: 'architecture',
+            title: 'Modern Building'
+        },
+        {
+            id: 3,
+            src: 'https://source.unsplash.com/random/600x600/?portrait',
+            alt: 'Portrait of a woman',
+            category: 'people',
+            title: 'Portrait Photography'
+        },
+        {
+            id: 4,
+            src: 'https://source.unsplash.com/random/600x600/?wildlife',
+            alt: 'Wild animal in nature',
+            category: 'animals',
+            title: 'Wildlife Photography'
+        },
+        {
+            id: 5,
+            src: 'https://source.unsplash.com/random/600x600/?forest',
+            alt: 'Dense forest',
+            category: 'nature',
+            title: 'Forest Path'
+        },
+        {
+            id: 6,
+            src: 'https://source.unsplash.com/random/600x600/?skyscraper',
+            alt: 'City skyscraper',
+            category: 'architecture',
+            title: 'Urban Architecture'
+        },
+        {
+            id: 7,
+            src: 'https://source.unsplash.com/random/600x600/?child',
+            alt: 'Child playing',
+            category: 'people',
+            title: 'Childhood Moments'
+        },
+        {
+            id: 8,
+            src: 'https://source.unsplash.com/random/600x600/?bird',
+            alt: 'Colorful bird',
+            category: 'animals',
+            title: 'Exotic Bird'
+        },
+        {
+            id: 9,
+            src: 'https://source.unsplash.com/random/600x600/?waterfall',
+            alt: 'Waterfall in jungle',
+            category: 'nature',
+            title: 'Jungle Waterfall'
+        },
+        {
+            id: 10,
+            src: 'https://source.unsplash.com/random/600x600/?bridge',
+            alt: 'Modern bridge',
+            category: 'architecture',
+            title: 'Suspension Bridge'
+        },
+        {
+            id: 11,
+            src: 'https://source.unsplash.com/random/600x600/?family',
+            alt: 'Happy family',
+            category: 'people',
+            title: 'Family Portrait'
+        },
+        {
+            id: 12,
+            src: 'https://source.unsplash.com/random/600x600/?lion',
+            alt: 'Lion in savanna',
+            category: 'animals',
+            title: 'King of the Jungle'
+        }
+    ];
+
+    // DOM Elements
+    const gallery = document.getElementById('gallery');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const closeBtn = document.getElementById('closeBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    let currentImageIndex = 0;
+    let filteredImages = [];
+
+    // Initialize gallery
+    function initGallery() {
+        renderGallery(galleryData);
+        filteredImages = [...galleryData];
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    }
+
+    // Render gallery items
+    function renderGallery(images) {
+        gallery.innerHTML = '';
+        
+        if (images.length === 0) {
+            gallery.innerHTML = '<p class="empty">No images found in this category</p>';
+            return;
+        }
+
+        images.forEach((image, index) => {
+            const galleryItem = document.createElement('div');
+            galleryItem.className = 'gallery-item';
+            galleryItem.dataset.category = image.category;
+            galleryItem.dataset.index = index;
+            
+            galleryItem.innerHTML = `
+                <img src="${image.src}" alt="${image.alt}" class="gallery-img">
+                <span class="gallery-category">${image.category}</span>
+                <div class="gallery-caption">
+                    <h3>${image.title}</h3>
+                    <p>Click to view larger</p>
+                </div>
+            `;
+            
+            gallery.appendChild(galleryItem);
+            
+            // Add click event to open lightbox
+            galleryItem.addEventListener('click', () => {
+                openLightbox(index);
+            });
+        });
+    }
+
+    // Filter gallery by category
+    function filterGallery(category) {
+        if (category === 'all') {
+            filteredImages = [...galleryData];
+        } else {
+            filteredImages = galleryData.filter(image => image.category === category);
+        }
+        renderGallery(filteredImages);
+    }
+
+    // Open lightbox with selected image
+    function openLightbox(index) {
+        currentImageIndex = index;
+        const image = filteredImages[index];
+        
+        lightboxImg.src = image.src;
+        lightboxImg.alt = image.alt;
+        lightboxCaption.textContent = image.title;
+        
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Close lightbox
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+
+    // Navigate to previous image
+    function prevImage() {
+        currentImageIndex = (currentImageIndex - 1 + filteredImages.length) % filteredImages.length;
+        updateLightbox();
+    }
+
+    // Navigate to next image
+    function nextImage() {
+        currentImageIndex = (currentImageIndex + 1) % filteredImages.length;
+        updateLightbox();
+    }
+
+    // Update lightbox content
+    function updateLightbox() {
+        const image = filteredImages[currentImageIndex];
+        lightboxImg.src = image.src;
+        lightboxImg.alt = image.alt;
+        lightboxCaption.textContent = image.title;
+        
+        // Add fade effect
+        lightboxImg.style.opacity = 0;
+        setTimeout(() => {
+            lightboxImg.style.opacity = 1;
+        }, 100);
+    }
+
+    // Event listeners
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Update active button
+            filterBtns.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Filter gallery
+            const category = this.dataset.filter;
+            filterGallery(category);
+        });
+    });
+
+    closeBtn.addEventListener('click', closeLightbox);
+    prevBtn.addEventListener('click', prevImage);
+    nextBtn.addEventListener('click', nextImage);
+
+    // Close lightbox when clicking outside image
+    lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (lightbox.classList.contains('active')) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            } else if (e.key === 'ArrowLeft') {
+                prevImage();
+            } else if (e.key === 'ArrowRight') {
+                nextImage();
+            }
+        }
+    });
+
+    // Initialize the gallery
+    initGallery();
+});
