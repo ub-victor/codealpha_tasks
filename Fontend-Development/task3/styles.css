@@ -305,3 +305,8 @@ footer {
     padding-top: 20px;
 }
 
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
