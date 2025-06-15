@@ -225,3 +225,12 @@ h1 {
 .close-btn:hover, .prev-btn:hover, .next-btn:hover {
     background: var(--primary);
 }
+
+footer {
+    background: linear-gradient(120deg, var(--primary), var(--primary-dark));
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
