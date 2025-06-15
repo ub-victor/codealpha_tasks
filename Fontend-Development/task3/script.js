@@ -195,18 +195,18 @@ document.addEventListener('DOMContentLoaded', function() {
             src: 'assets/animals/animal7.jpg',
             alt: 'Wild animal in nature',
             category: 'animals',
-            title: 'A tigger in chase '
+            title: 'So cute animal '
         },
         {
             id: 29,
             src: 'assets/natural/natural8.jpg',
             alt: 'Dense forest',
             category: 'nature',
-            title: 'A river'
+            title: 'A Mountain in a Forest'
         },
         {
             id: 30,
-            src: 'assets/architecture/architecture8.jpg',
+            src: 'assets/architecture/architecture8.jpeg',
             alt: 'City skyscraper',
             category: 'architecture',
             title: 'Urban Architecture'
@@ -216,42 +216,42 @@ document.addEventListener('DOMContentLoaded', function() {
             src: 'assets/people/per8.jpg',
             alt: 'Child playing',
             category: 'people',
-            title: 'A Consacreted Family'
+            title: 'La mifa sacrée BolideVicto'
         },
         {
             id: 32,
             src: 'assets/animals/animal8.jpg',
             alt: 'Colorful animal',
             category: 'animals',
-            title: 'An animal read A Bible'
+            title: 'Two beaty cats'
         },
         {
             id: 33,
             src: 'assets/natural/natural9.jpg',
             alt: 'Waterfall in jungle',
             category: 'nature',
-            title: 'Waterfall In Mountain'
+            title: 'Beautifull Flowers'
         },
         {
             id: 34,
-            src: 'assets/architecture/architecture9.png',
+            src: 'assets/architecture/architecture9.jpg',
             alt: 'Modern bridge',
             category: 'architecture',
-            title: 'Modern Building'
+            title: "Winner's house Blueprient"
         },
         {
             id: 35,
             src: 'assets/people/per9.jpg',
             alt: 'Happy family',
             category: 'people',
-            title: 'My beloved Parent'
+            title: "Djasmine l'amie"
         },
         {
             id: 36,
             src: 'assets/animals/animal9.avif',
             alt: 'Cameleon dans la nature',
             category: 'animals',
-            title: 'A little pup  puppy'
+            title: 'Elephet and its baby '
         }
     ];
 
