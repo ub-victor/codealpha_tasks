@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Image Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Modern Image Gallery</h1>
+            <p class="subtitle">Browse through our stunning collection of images</p>
+        </header>
+
+        <div class="filter-controls">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="nature">Nature</button>
+            <button class="filter-btn" data-filter="architecture">Architecture</button>
+            <button class="filter-btn" data-filter="people">People</button>
+            <button class="filter-btn" data-filter="animals">Animals</button>
+        </div>
+
+        <div class="gallery" id="gallery">
+            <!-- Gallery items will be added dynamically -->
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="close-btn" id="closeBtn">&times;</button>
+            <button class="prev-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+            <img src="" alt="" class="lightbox-img" id="lightboxImg">
+            <button class="next-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+            <p class="lightbox-caption" id="lightboxCaption"></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-credits">
+                    <h5>Challenge Task by CodeAlpha</h5>
+                    <h5>Developed by Ushindi Bihame</h5>
+                </div>
+                <div class="footer-github">
+                    <h3>Check out my GitHub!!</h3>
+                    <div class="github-link">
+                        <i class="fas fa-hand-point-down"></i>
+                        <a href="https://github.com/ub-victor" target="_blank" class="github-btn">
+                            <i class="fab fa-github"></i> Visit GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright &copy; <span id="current-year"></span> Ushindi Bihame - All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
