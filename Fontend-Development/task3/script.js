@@ -66,17 +66,17 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 10,
-            src: 'https://source.unsplash.com/random/600x600/?bridge',
+            src: 'assets/architecture/architecture3.jpg',
             alt: 'Modern bridge',
             category: 'architecture',
             title: 'Suspension Bridge'
         },
         {
             id: 11,
-            src: 'https://source.unsplash.com/random/600x600/?family',
+            src: 'assets/animals/animal2.jpg',
             alt: 'Happy family',
             category: 'people',
-            title: 'Family Portrait'
+            title: 'Constant un mec souriant '
         },
         {
             id: 12,
