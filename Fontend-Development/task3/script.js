@@ -276,10 +276,45 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 40,
-            src: 'assets/animals/animal10.jpj',
+            src: 'assets/animals/animal10.jpg',
             alt: 'Cameleon dans la nature',
             category: 'animals',
             title: 'Elephet and its baby '
+        },
+        {
+            id: 41,
+            src: 'assets/people/per11.jpg',
+            alt: 'Happy family',
+            category: 'people',
+            title: "Vick de Victo , Victo de Vick"
+        },
+        {
+            id: 42,
+            src: 'assets/people/per12.jpg',
+            alt: 'Happy family',
+            category: 'people',
+            title: "Vick de Victo , Victo de Vick"
+        },
+        {
+            id: 43,
+            src: 'assets/people/per13.jpg',
+            alt: 'Happy family',
+            category: 'people',
+            title: "Vick de Victo , Victo de Vick"
+        },
+        {
+            id: 44,
+            src: 'assets/people/per14.jpg',
+            alt: 'Happy family',
+            category: 'people',
+            title: "Vick de Victo , Victo de Vick"
+        },
+        {
+            id: 45,
+            src: 'assets/people/per15.jpg',
+            alt: 'Happy family',
+            category: 'people',
+            title: "Vick de Victo , Victo de Vick"
         }
     ];
 
