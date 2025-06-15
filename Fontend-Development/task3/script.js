@@ -104,21 +104,21 @@ document.addEventListener('DOMContentLoaded', function() {
             src: 'assets/people/per4.jpg',
             alt: 'Portrait',
             category: 'people',
-            title: 'Winner Photography'
+            title: 'Alicia in Smilled mood'
         },
         {
             id: 16,
             src: 'assets/animals/animal5.jpg',
             alt: 'Wild animal in nature',
             category: 'animals',
-            title: 'Le Roi des Animaux'
+            title: 'A tigger in chase '
         },
         {
             id: 17,
             src: 'assets/natural/natural5.jpg',
             alt: 'Dense forest',
             category: 'nature',
-            title: 'Forest Path'
+            title: 'A river'
         },
         {
             id: 18,
@@ -132,42 +132,42 @@ document.addEventListener('DOMContentLoaded', function() {
             src: 'assets/people/per6.jpg',
             alt: 'Child playing',
             category: 'people',
-            title: 'A big Bro who Everyone wish'
+            title: 'A Consacreted Family'
         },
         {
             id: 20,
             src: 'assets/animals/animal6.jpg',
             alt: 'Colorful animal',
             category: 'animals',
-            title: 'beauty of the forest'
+            title: 'An animal read A Bible'
         },
         {
             id: 21,
             src: 'assets/natural/natural6.jpg',
             alt: 'Waterfall in jungle',
             category: 'nature',
-            title: 'Jungle Beauty'
+            title: 'Waterfall In Mountain'
         },
         {
             id: 22,
             src: 'assets/architecture/architecture7.png',
             alt: 'Modern bridge',
             category: 'architecture',
-            title: 'Suspension Bridge'
+            title: 'Modern Building'
         },
         {
             id: 23,
             src: 'assets/people/per7.jpg',
             alt: 'Happy family',
             category: 'people',
-            title: 'Constant un mec souriant '
+            title: 'My beloved Parent'
         },
         {
             id: 24,
             src: 'assets/animals/animal7.avif',
             alt: 'Cameleon dans la nature',
             category: 'animals',
-            title: 'Cameleon dans la nature'
+            title: 'A little pup  puppy'
         }
     ];
 
