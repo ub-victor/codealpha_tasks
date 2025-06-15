@@ -168,6 +168,90 @@ document.addEventListener('DOMContentLoaded', function() {
             alt: 'Cameleon dans la nature',
             category: 'animals',
             title: 'A little pup  puppy'
+        },
+        {
+            id: 13,
+            src: 'assets/natural/natural4.jpg',
+            alt: 'Beautiful Flower',
+            category: 'nature',
+            title: 'Beautiful Flower'
+        },
+        {
+            id: 14,
+            src: 'assets/architecture/architecture4.jpg',
+            alt: 'Modern architecture',
+            category: 'architecture',
+            title: 'Modern Building'
+        },
+        {
+            id: 15,
+            src: 'assets/people/per4.jpg',
+            alt: 'Portrait',
+            category: 'people',
+            title: 'Alicia in Smilled mood'
+        },
+        {
+            id: 16,
+            src: 'assets/animals/animal5.jpg',
+            alt: 'Wild animal in nature',
+            category: 'animals',
+            title: 'A tigger in chase '
+        },
+        {
+            id: 17,
+            src: 'assets/natural/natural5.jpg',
+            alt: 'Dense forest',
+            category: 'nature',
+            title: 'A river'
+        },
+        {
+            id: 18,
+            src: 'assets/architecture/architecture5.jpg',
+            alt: 'City skyscraper',
+            category: 'architecture',
+            title: 'Urban Architecture'
+        },
+        {
+            id: 19,
+            src: 'assets/people/per6.jpg',
+            alt: 'Child playing',
+            category: 'people',
+            title: 'A Consacreted Family'
+        },
+        {
+            id: 20,
+            src: 'assets/animals/animal6.jpg',
+            alt: 'Colorful animal',
+            category: 'animals',
+            title: 'An animal read A Bible'
+        },
+        {
+            id: 21,
+            src: 'assets/natural/natural6.jpg',
+            alt: 'Waterfall in jungle',
+            category: 'nature',
+            title: 'Waterfall In Mountain'
+        },
+        {
+            id: 22,
+            src: 'assets/architecture/architecture7.png',
+            alt: 'Modern bridge',
+            category: 'architecture',
+            title: 'Modern Building'
+        },
+        {
+            id: 23,
+            src: 'assets/people/per7.jpg',
+            alt: 'Happy family',
+            category: 'people',
+            title: 'My beloved Parent'
+        },
+        {
+            id: 24,
+            src: 'assets/animals/animal7.avif',
+            alt: 'Cameleon dans la nature',
+            category: 'animals',
+            title: 'A little pup  puppy'
         }
     ];
 
