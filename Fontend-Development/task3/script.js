@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
             src: 'assets/people/per5.jpg',
             alt: 'Child playing',
             category: 'people',
-            title: 'A Consacreted Family'
+            title: 'Victor in relax mode'
         },
         {
             id: 20,
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
             src: 'assets/people/per7.jpg',
             alt: 'Portrait',
             category: 'people',
-            title: 'Alicia in Smilled mood'
+            title: 'My beloved parent'
         },
         {
             id: 28,
