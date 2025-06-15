@@ -68,3 +68,18 @@ h1 {
     font-weight: 600;
 }
 
+.filter-btn {
+    padding: 8px 20px;
+    background: white;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 600;
+}
+
+.filter-btn:hover, {
+    background: var(--primary);
+    color: white;
+}
