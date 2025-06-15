@@ -286,35 +286,35 @@ document.addEventListener('DOMContentLoaded', function() {
             src: 'assets/people/per11.jpg',
             alt: 'Happy family',
             category: 'people',
-            title: "Vick de Victo , Victo de Vick"
+            title: "Kind Anah"
         },
         {
             id: 42,
             src: 'assets/people/per12.jpg',
             alt: 'Happy family',
             category: 'people',
-            title: "Vick de Victo , Victo de Vick"
+            title: "Mon petit Varius"
         },
         {
             id: 43,
             src: 'assets/people/per13.jpg',
             alt: 'Happy family',
             category: 'people',
-            title: "Vick de Victo , Victo de Vick"
+            title: "Papa biroré"
         },
         {
             id: 44,
             src: 'assets/people/per14.jpg',
             alt: 'Happy family',
             category: 'people',
-            title: "Vick de Victo , Victo de Vick"
+            title: "papa Va"
         },
         {
             id: 45,
             src: 'assets/people/per15.jpg',
             alt: 'Happy family',
             category: 'people',
-            title: "Vick de Victo , Victo de Vick"
+            title: "Mode Sport"
         }
     ];
 
