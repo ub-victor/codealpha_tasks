@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
             src: 'assets/people/per6.jpg',
             alt: 'Happy family',
             category: 'people',
-            title: 'My beloved Parent'
+            title: 'A Consecreted Family'
         },
         {
             id: 24,
@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', function() {
             title: "Djasmine l'amie"
         },
         {
-            id: 36,
+            id: 35,
             src: 'assets/animals/animal9.avif',
             alt: 'Cameleon dans la nature',
             category: 'animals',
