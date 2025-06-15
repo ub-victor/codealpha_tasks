@@ -129,3 +129,19 @@ h1 {
     transform: translateY(100%);
     transition: var(--transition);
 }
+
+.gallery-item:hover .gallery-caption {
+    transform: translateY(0);
+}
+
+.gallery-category {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--primary);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
