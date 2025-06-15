@@ -170,43 +170,43 @@ document.addEventListener('DOMContentLoaded', function() {
             title: 'A little pup  puppy'
         },
         {
-            id: 13,
-            src: 'assets/natural/natural4.jpg',
+            id: 25,
+            src: 'assets/natural/natural8.jpg',
             alt: 'Beautiful Flower',
             category: 'nature',
             title: 'Beautiful Flower'
         },
         {
-            id: 14,
-            src: 'assets/architecture/architecture4.jpg',
+            id: 26,
+            src: 'assets/architecture/architecture8.jpg',
             alt: 'Modern architecture',
             category: 'architecture',
             title: 'Modern Building'
         },
         {
-            id: 15,
-            src: 'assets/people/per4.jpg',
+            id: 27,
+            src: 'assets/people/per8.jpg',
             alt: 'Portrait',
             category: 'people',
             title: 'Alicia in Smilled mood'
         },
         {
-            id: 16,
-            src: 'assets/animals/animal5.jpg',
+            id: 28,
+            src: 'assets/animals/animal9.jpg',
             alt: 'Wild animal in nature',
             category: 'animals',
             title: 'A tigger in chase '
         },
         {
-            id: 17,
-            src: 'assets/natural/natural5.jpg',
+            id: 29,
+            src: 'assets/natural/natural9.jpg',
             alt: 'Dense forest',
             category: 'nature',
             title: 'A river'
         },
         {
-            id: 18,
-            src: 'assets/architecture/architecture5.jpg',
+            id: 30,
+            src: 'assets/architecture/architecture9.jpg',
             alt: 'City skyscraper',
             category: 'architecture',
             title: 'Urban Architecture'
