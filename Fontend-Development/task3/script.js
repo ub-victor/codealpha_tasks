@@ -73,17 +73,101 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 11,
-            src: 'assets/people/per3.webp',
+            src: 'assets/people/per3.jpg',
             alt: 'Happy family',
             category: 'people',
             title: 'Constant un mec souriant '
         },
         {
             id: 12,
-            src: 'assets/animals/animal3.jpg',
-            alt: 'Lion in savanna',
+            src: 'assets/animals/animal3.webp',
+            alt: 'Cameleon dans la nature',
             category: 'animals',
-            title: 'King of the Jungle'
+            title: 'Cameleon dans la nature'
+        },
+        {
+            id: 13,
+            src: 'assets/natural/natural4.jpg',
+            alt: 'Beautiful Flower',
+            category: 'nature',
+            title: 'Beautiful Flower'
+        },
+        {
+            id: 14,
+            src: 'assets/architecture/architecture4.jpg',
+            alt: 'Modern architecture',
+            category: 'architecture',
+            title: 'Modern Building'
+        },
+        {
+            id: 15,
+            src: 'assets/people/per4.jpg',
+            alt: 'Portrait',
+            category: 'people',
+            title: 'Winner Photography'
+        },
+        {
+            id: 16,
+            src: 'assets/animals/animal5.jpg',
+            alt: 'Wild animal in nature',
+            category: 'animals',
+            title: 'Le Roi des Animaux'
+        },
+        {
+            id: 17,
+            src: 'assets/natural/natural5.jpg',
+            alt: 'Dense forest',
+            category: 'nature',
+            title: 'Forest Path'
+        },
+        {
+            id: 18,
+            src: 'assets/architecture/architecture5.jpg',
+            alt: 'City skyscraper',
+            category: 'architecture',
+            title: 'Urban Architecture'
+        },
+        {
+            id: 19,
+            src: 'assets/people/per6.jpg',
+            alt: 'Child playing',
+            category: 'people',
+            title: 'A big Bro who Everyone wish'
+        },
+        {
+            id: 20,
+            src: 'assets/animals/animal6.jpg',
+            alt: 'Colorful animal',
+            category: 'animals',
+            title: 'beauty of the forest'
+        },
+        {
+            id: 21,
+            src: 'assets/natural/natural6.jpg',
+            alt: 'Waterfall in jungle',
+            category: 'nature',
+            title: 'Jungle Beauty'
+        },
+        {
+            id: 22,
+            src: 'assets/architecture/architecture7.jpeg',
+            alt: 'Modern bridge',
+            category: 'architecture',
+            title: 'Suspension Bridge'
+        },
+        {
+            id: 23,
+            src: 'assets/people/per7.jpg',
+            alt: 'Happy family',
+            category: 'people',
+            title: 'Constant un mec souriant '
+        },
+        {
+            id: 24,
+            src: 'assets/animals/animal7.webp',
+            alt: 'Cameleon dans la nature',
+            category: 'animals',
+            title: 'Cameleon dans la nature'
         }
     ];
 
