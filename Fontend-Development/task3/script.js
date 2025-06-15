@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 4,
-            src: 'assets/animal/animal1.jpg',
+            src: 'assets/animals/animal1.jpg',
             alt: 'Wild animal in nature',
             category: 'animals',
             title: 'Le Roi des Animaux'
