@@ -247,7 +247,35 @@ document.addEventListener('DOMContentLoaded', function() {
             title: "Djasmine l'amie"
         },
         {
+            id: 36,
+            src: 'assets/animals/animal9.avif',
+            alt: 'Cameleon dans la nature',
+            category: 'animals',
+            title: 'Elephet and its baby '
+        },
+        {
+            id: 33,
+            src: 'assets/natural/natural9.jpg',
+            alt: 'Waterfall in jungle',
+            category: 'nature',
+            title: 'Beautifull Flowers'
+        },
+        {
+            id: 34,
+            src: 'assets/architecture/architecture9.jpg',
+            alt: 'Modern bridge',
+            category: 'architecture',
+            title: "Winner's house Blueprient"
+        },
+        {
             id: 35,
+            src: 'assets/people/per9.jpg',
+            alt: 'Happy family',
+            category: 'people',
+            title: "Djasmine l'amie"
+        },
+        {
+            id: 36,
             src: 'assets/animals/animal9.avif',
             alt: 'Cameleon dans la nature',
             category: 'animals',
