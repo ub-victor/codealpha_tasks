@@ -56,3 +56,14 @@ h1 {
     gap: 10px;
     margin-bottom: 30px;
 }
+
+.filter-btn {
+    padding: 8px 20px;
+    background: white;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 600;
+}
