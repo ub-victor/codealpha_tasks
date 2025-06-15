@@ -201,3 +201,27 @@ h1 {
     cursor: pointer;
     transition: var(--transition);
 }
+
+.close-btn {
+    top: -50px;
+    right: 0;
+    font-size: 1.5rem;
+}
+
+.prev-btn, .next-btn {
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+}
+
+.prev-btn {
+    left: -50px;
+}
+
+.next-btn {
+    right: -50px;
+}
+
+.close-btn:hover, .prev-btn:hover, .next-btn:hover {
+    background: var(--primary);
+}
