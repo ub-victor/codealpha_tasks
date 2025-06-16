@@ -26,5 +26,5 @@ An interactive, responsive image gallery with filtering and lightbox viewing cap
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/image-gallery.git
+git clone https://github.com/ub-victor/codealpha_tasks/tree/main/Fontend-Development/task3
 cd image-gallery
