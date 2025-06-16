@@ -1,0 +1,151 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <meta charset="UTF-8"> 
+    <title>Contact Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900|Cormant+Garamond:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+       <a href="index.html" class="header-brand">winner</a>
+       <nav>
+        <ul>
+          <li><a href="Portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About me</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="cases.html" class="header-cases">Cases</a> 
+       </nav>
+    </header>
+    <main>
+        <section class="contact-banner">
+            <div class="vertical-center">
+                <h2>Let's Work Together</h2>
+                <h1>Have a project in mind? Get in touch!</h1>
+            </div>
+        </section>
+        <section class="contact-content">
+            <div class="wrapper">
+                <div class="contact-grid">
+                    <div class="contact-form">
+                        <h3>Send Me a Message</h3>
+                        <form id="contactForm" action="https://formspree.io/f/mwpboabd" method="POST">
+                            <!-- Hidden Formspree settings -->
+                            <input type="hidden" name="_language" value="en">
+                            <input type="hidden" name="_subject" value="New Contact From {{name}}">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="text" name="_gotcha" style="display:none">
+                            
+                            <!-- Visible Form Fields -->
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                            <div id="form-message"></div>
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="info-item">
+                            <div class="info-icon">📍</div>
+                            <p>Kigali, Rwanda/ DRC Goma</p>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">📞</div>
+                            <p>+250 79 44 12 876</p>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">✉️</div>
+                            <p>victoireushindi371@gmail.com</p>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">🕒</div>
+                            <p>Mon-Fri: 9AM - 6PM</p>
+                        </div>
+                        <div class="social-links">
+                            <h4>Connect With Me</h4>
+                            <div class="social-icons">
+                                <a href="https://www.youtube.com/channel/UCz6kyvlssf2Um4QX6Q98j5Q" target="_blank">
+                                    <img src="image/youtube.png" alt="YouTube">
+                                </a>
+                                <a href="#" target="_blank">
+                                    <img src="image/linkedin.png" alt="LinkedIn">
+                                </a>
+                                <a href="#" target="_blank">
+                                    <img src="image/facebook.jpeg" alt="Facebook">
+                                </a>
+                                <a href="https://github.com/ub-victor" target="_blank">
+                                    <img src="image/github.png" alt="GitHub">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.490317489007!2d30.05870281475392!3d-1.9535375370214735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca6e5a1e8c3c9%3A0x1baf6a4b8e6d3b1f!2sKigali%2C%20Rwanda!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="wrapper">
+        <footer>
+            <ul class="footer-link-main">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="Portfolio.html">Portfolio</a></li>
+              <li><a href="cases.html">Cases</a></li>
+              <li><a href="about.html">About me</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <ul class="footer-links-cases">
+              <li><p>Latest Cases</p></li>
+              <li><a href="#">MAILING SHAOLIN - WEB DEVELOPMENT</a></li>
+              <li><a href="#">EXCELLENTO - WEB DEVELOPEMENT , SEO</a></li>
+              <li><a href="#">VICTOR - YOUTUBE CHANNER</a></li>
+              <li><a href="#">WELTEC - VIDEO PRODUCT</a></li>
+            </ul>
+            <div class="footer-sm">
+              <a href="https://github.com/ub-victor" target="_blank">
+                <img src="image/github.png" alt="youtube icon">
+              </a>
+              <a href="https://www.linkedin.com/in/victoire-ushindi-46a06a285/">
+                <img src="image/linkedin.png" alt="linkedin icon">
+              </a>
+              <a href="https://www.facebook.com/victoire.bihame.2025/">
+                <img src="image/facebook.jpeg" alt="facebook icon">
+              </a>
+            </div>
+            <div class="Reserved">
+                <h2>Check out my GitHub !!</h2>
+                <h2>👇🏿👇</h2>  
+                <p>Copyright &copy; <span id="current-year"></span> Victor - All Rights Reserved | Visit my <a href="https://github.com/ub-victor" target="_blank">GitHub</a>.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="contact.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
