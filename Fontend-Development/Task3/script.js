@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 5,
-            src: 'assets/natural/natural2.jpg', 
+            src: 'assets/natural/natural2.jpg',
             alt: 'Dense forest',
             category: 'nature',
             title: 'Forest Path'
