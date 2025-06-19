@@ -49,15 +49,20 @@ header {
 }
 
 .logo {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
     margin-bottom: 15px;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.9rem;
     color: var(--primary);
     margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.7rem;
 }
 
 .todo-app {
@@ -100,6 +105,7 @@ h1 {
     transition: var(--transition);
     display: flex;
     align-items: center;
+    /* justify-content: center; */
     gap: 8px;
 }
 
