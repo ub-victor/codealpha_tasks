@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Pro | To-Do List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <img src="assets/images/checklist-icon.png" alt="Checklist icon" class="logo">
+                <h1>Productivity Pro</h1>
+                <p>Your daily task manager</p>
+            </div>
+        </header>
+
+        <main>
+            <div class="todo-app">
+                <div class="input-section">
+                    <input type="text" id="task-input" placeholder="Add a new task..." autocomplete="off">
+                    <button id="add-task-btn"><i class="fas fa-plus"></i> Add Task</button>
+                </div>
+
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="active">Active</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
+
+                <ul id="task-list">
+                    <!-- Tasks will be added here dynamically -->
+                </ul>
+
+                <div class="stats">
+                    <span id="tasks-count">0 tasks</span>
+                    <button id="clear-completed">Clear Completed</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-credits">
+                    <a href="https://www.codealpha.tech/" target="_blank"><h5>Challenge Task by CodeAlpha</h5></a>
+                    <a href="www.linkedin.com/in/victoire-ushindi-46a06a285" target="_blank"><h5>Developed by Ushindi Bihame</h5></a>
+                </div>
+                <div class="footer-github">
+                    <h3>Check out my GitHub!!</h3>
+                    <div class="github-link">
+                        <i class="fas fa-hand-point-down"></i>
+                        <a href="https://github.com/ub-victor" target="_blank" class="github-btn">
+                            <i class="fab fa-github"></i> Visit GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright &copy; <span id="current-year"></span> Ushindi Bihame - All Rights Reserved</p>
+                <p class="app-version">v1.0.0</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
