@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
             taskItem.innerHTML = `
                 <input type="checkbox" class="task-checkbox" ${task.completed ? 'checked' : ''}>
                 <span class="task-text ${task.completed ? 'completed' : ''}">${task.text}</span>
-                <div class="task-actions">
+                <div class="task-acstions">
                     <button class="edit-btn" title="Edit task"><i class="fas fa-edit"></i></button>
                     <button class="delete-btn" title="Delete task"><i class="fas fa-trash"></i></button>
                 </div>
