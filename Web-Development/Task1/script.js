@@ -9,4 +9,16 @@ document.addEventListener('DOMContentLoaded', function() {
     
     let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
     let currentFilter = 'all';
+
+    // Initialize the app
+    function init() {
+        renderTasks();
+        updateTasksCount();
+        setCurrentYear();
+        
+        // Event listeners
+        addTaskBtn.addEventListener('click', addTask);
+        taskInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') addTask();
+        });
 })
