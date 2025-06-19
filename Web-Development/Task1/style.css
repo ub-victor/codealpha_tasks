@@ -105,7 +105,7 @@ header p {
     transition: var(--transition);
     display: flex;
     align-items: center;
-    /* justify-content: center; */
+    justify-content: center;
     gap: 8px;
 }
 
