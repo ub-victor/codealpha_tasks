@@ -6,5 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const clearCompletedBtn = document.getElementById('clear-completed');
     const tasksCount = document.getElementById('tasks-count');
-    console.log(filterBtns);
+    
+    let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    let currentFilter = 'all';
 })
