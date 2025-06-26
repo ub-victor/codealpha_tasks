@@ -30,11 +30,11 @@ An interactive, responsive image gallery with filtering and lightbox viewing cap
 
 **🔗 GitHub Profile:** [**My Github**](https://github.com/ub-victor)
 
-**🔗Portfolio Website:** [**My Portfolio**](https://my-portfolio-website-show-skills.netlify.app/)
+**🔗Portfolio Website:** [**My Portfolio**](https://modern-imagegallery.netlify.app/)
 
 ## 🚀 Installation & Usage
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/ub-victor/codealpha_tasks/tree/main/Fontend-Development/task3
+git clone https://github.com/ub-victor/codealpha_tasks/tree/main/Fontend-Development/Task3
 cd image-gallery
