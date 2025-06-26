@@ -22,6 +22,16 @@ An interactive, responsive image gallery with filtering and lightbox viewing cap
 - **Design**: CSS Grid, Flexbox, CSS Variables
 - **Responsive**: Mobile-first approach with media queries
 
+## Developer
+
+**👨‍💻 Name:** **Ushindi Bihame**
+
+**📧 Email:** [**My Email**](victoireushindhi371@123!)
+
+**🔗 GitHub Profile:** [**My Github**](https://github.com/ub-victor)
+
+**🔗Portfolio Website:** [**My Portfolio**](https://my-portfolio-website-show-skills.netlify.app/)
+
 ## 🚀 Installation & Usage
 
 1. Clone the repository:
