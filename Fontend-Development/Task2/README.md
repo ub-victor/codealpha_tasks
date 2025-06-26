@@ -117,4 +117,5 @@ A modern, responsive portfolio website showcasing my skills as a full-stack web 
 
 1. Clone the repository:
    ```bash
-   git clone 
+   git clone   https://github.com/ub-victor/codealpha_tasks/tree/main/Fontend-Development/Task2
+   cd enter in the directory where you save this project
