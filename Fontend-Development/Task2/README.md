@@ -112,6 +112,15 @@ A modern, responsive portfolio website showcasing my skills as a full-stack web 
   - Minified assets
   - Lazy loading
 
+## Developer
+
+**👨‍💻 Name:** **Ushindi Bihame**
+
+**📧 Email:** [**My Email**](victoireushindhi371@123!)
+
+**🔗 GitHub Profile:** [**My Github**](https://github.com/ub-victor)
+
+**🔗Portfolio Website:** [**My Portfolio**](https://my-portfolio-website-show-skills.netlify.app/)
 
 ## 🚀 Installation & Setup
 
